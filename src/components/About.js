@@ -7,7 +7,7 @@ const About = ({ bypassHeight }) => {
         bypassHeight ? bypassHeight : "min-h-screen"
       }`}
     >
-      <div className="flex flex-col items-center gap-5">
+      <div className="flex flex-col items-center gap-5 px-5 text-justify">
         <h2 className="text-4xl font-semibold">About me</h2>
         <p>
           My name is Md. Shohanur Rahman and I’m a web developer. My expertise
@@ -22,7 +22,7 @@ const About = ({ bypassHeight }) => {
           features into existing ones; well short of our own evolution from
           species of human to aliens if the transcendance hypothesis came true!
         </p>
-        <Link to="/contact" className="btn btn-primary">
+        <Link to="/contact" className="btn btn-primary mt-3">
           Send me a message
         </Link>
       </div>

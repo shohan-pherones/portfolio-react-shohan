@@ -51,7 +51,7 @@ const Blogs = () => {
   return (
     <section className="container mx-auto py-10 min-h-screen">
       <h2 className="text-4xl font-semibold text-center mb-10">Recent blogs</h2>
-      <div className="blogs-wrapper flex flex-col gap-10">
+      <div className="blogs-wrapper flex flex-col gap-10 px-5">
         {blogs.map((blog) => (
           <div
             className="blog flex gap-5 flex-col xl:grid xl:grid-cols-4"
@@ -73,7 +73,7 @@ const Blogs = () => {
                   })}
                 </span>
               </p>
-              <p>{blog.body}</p>
+              <p className="text-justify">{blog.body}</p>
               <a
                 href={blog.url}
                 target="_blank"

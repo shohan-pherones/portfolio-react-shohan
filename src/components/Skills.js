@@ -78,7 +78,7 @@ const Skills = ({ bypassHeight }) => {
         {skills.map((skill) => (
           <div
             key={skill.id}
-            className="skill w-24 overflow-hidden shadow-md p-3 rounded-lg grid items-center"
+            className="skill w-24 overflow-hidden p-3 grid items-center shadow-md rounded-lg"
           >
             <img src={skill.img} alt={skill.title} />
           </div>

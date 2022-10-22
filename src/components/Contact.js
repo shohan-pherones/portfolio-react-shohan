@@ -18,17 +18,13 @@ const Contact = ({ bypassHeight }) => {
         "_donm6DiuagFO3W1D"
       )
       .then(
-        (result) => {
-          console.log(result.text);
-          console.log("message sent");
+        () => {
+          history.push("/feedback");
         },
-        (error) => {
-          console.log(error.text);
-          console.log("message not sent");
+        () => {
+          history.push("/failed");
         }
       );
-
-    history.push("/feedback");
   };
 
   return (

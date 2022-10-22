@@ -7,6 +7,7 @@ import Blogs from "./components/Blogs";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Feedback from "./components/Feedback";
+import Failed from "./components/Failed";
 import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
 
@@ -35,6 +36,9 @@ const App = () => {
         </Route>
         <Route path="/feedback">
           <Feedback />
+        </Route>
+        <Route path="/failed">
+          <Failed />
         </Route>
         <Route path="*">
           <NotFound />

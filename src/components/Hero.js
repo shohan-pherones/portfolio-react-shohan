@@ -1,53 +1,13 @@
 import hero from "../assets/img/hero.png";
-import { motion } from "framer-motion";
-
-const heroTextVar = {
-  from: {
-    x: "-100vw",
-    opacity: 0,
-  },
-  to: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      delay: 0.5,
-      type: "spring",
-      stiffness: 50,
-    },
-  },
-};
-
-const heroImgVar = {
-  from: {
-    x: "100vw",
-    opacity: 0,
-  },
-  to: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      delay: 0.5,
-      type: "spring",
-      stiffness: 50,
-    },
-  },
-};
 
 const Hero = () => {
   return (
     <header className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse gap-10">
-        <motion.div variants={heroImgVar} initial="from" animate="to">
+        <div>
           <img src={hero} alt="3d illustration of a programmer" />
-        </motion.div>
-        <motion.div
-          variants={heroTextVar}
-          initial="from"
-          animate="to"
-          className="text-center lg:text-left"
-        >
+        </div>
+        <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold lg:text-8xl">
             Md. Shohanur Rahman
           </h1>
@@ -72,7 +32,7 @@ const Hero = () => {
               GitHub
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </header>
   );

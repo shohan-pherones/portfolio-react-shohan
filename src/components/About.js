@@ -1,22 +1,4 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-
-const containerVariants = {
-  from: {
-    y: 200,
-    opacity: 0,
-  },
-  to: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      stiffness: 50,
-      duration: 1,
-      delay: 0.5,
-    },
-  },
-};
 
 const About = ({ bypassHeight }) => {
   return (
@@ -25,12 +7,7 @@ const About = ({ bypassHeight }) => {
         bypassHeight ? bypassHeight : "min-h-screen"
       }`}
     >
-      <motion.div
-        variants={containerVariants}
-        initial="from"
-        animate="to"
-        className="flex flex-col items-center gap-5 px-5 text-justify"
-      >
+      <div className="flex flex-col items-center gap-5 px-5 text-justify">
         <h2 className="text-4xl font-semibold">About me</h2>
         <p>
           My name is Md. Shohanur Rahman and I’m a web developer. My expertise
@@ -48,7 +25,7 @@ const About = ({ bypassHeight }) => {
         <Link to="/contact" className="btn btn-primary mt-3">
           Send me a message
         </Link>
-      </motion.div>
+      </div>
     </section>
   );
 };

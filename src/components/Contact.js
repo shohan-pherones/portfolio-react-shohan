@@ -13,7 +13,7 @@ const Contact = ({ bypassHeight }) => {
     emailjs
       .sendForm(
         "service_c8l1ril",
-        "template_42fboqf1",
+        "template_42fboqf",
         form.current,
         "_donm6DiuagFO3W1D"
       )

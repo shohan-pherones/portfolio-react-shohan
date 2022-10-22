@@ -63,9 +63,9 @@ const Blogs = () => {
             <div className="blog-texts flex flex-col items-start gap-2 xl:col-span-3">
               <h3 className="text-2xl font-semibold">{blog.title}</h3>
               <p className="">
-                Written by <span className="text-secondary">{blog.author}</span>{" "}
+                Written by <span className="text-primary">{blog.author}</span>{" "}
                 on{" "}
-                <span className="text-secondary">
+                <span className="text-primary">
                   {new Date(blog.publishedDate).toLocaleString("en-US", {
                     year: "numeric",
                     month: "short",

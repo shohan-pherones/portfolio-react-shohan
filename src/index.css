@@ -14,7 +14,8 @@ body {
 }
 
 ::selection {
-  background-color: rgb(101, 195, 200);
+  background-color: rgb(5, 122, 255);
+  color: rgb(204, 228, 255);
 }
 
 ::-webkit-scrollbar {
@@ -26,7 +27,6 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(101, 195, 200);
+  background-color: rgb(5, 122, 255);
   height: 10%;
-  border-radius: 10px;
 }

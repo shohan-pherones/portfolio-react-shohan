@@ -2,6 +2,54 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import contact from "../assets/img/contact.png";
 import { useHistory } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const imgVariants = {
+  from: {
+    y: 200,
+    opacity: 0,
+  },
+  to: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      duration: 3,
+      delay: 0.5,
+    },
+  },
+};
+
+const formVariants = {
+  from: {
+    x: "100vw",
+    opacity: 0,
+  },
+  to: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 50,
+      duration: 1,
+      delay: 0.5,
+    },
+  },
+};
+
+const h2Variants = {
+  from: {
+    opacity: 0,
+  },
+  to: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 2,
+    },
+  },
+};
 
 const Contact = ({ bypassHeight }) => {
   const form = useRef();
@@ -33,12 +81,22 @@ const Contact = ({ bypassHeight }) => {
         bypassHeight ? bypassHeight : "min-h-screen"
       }`}
     >
-      <h2 className="text-4xl font-semibold text-center mb-10">Contact me</h2>
+      <motion.h2
+        variants={h2Variants}
+        initial="from"
+        animate="to"
+        className="text-4xl font-semibold text-center mb-10"
+      >
+        Contact me
+      </motion.h2>
       <div className="grid grid-cols-1 md:grid-cols-2">
-        <div>
+        <motion.div variants={imgVariants} initial="from" animate="to">
           <img src={contact} alt="3d illustration of a rocket" />
-        </div>
-        <form
+        </motion.div>
+        <motion.form
+          variants={formVariants}
+          initial="from"
+          animate="to"
           ref={form}
           onSubmit={sendEmail}
           className="flex flex-col items-center gap-3 self-center"
@@ -96,7 +154,7 @@ const Contact = ({ bypassHeight }) => {
             />
           </div>
           <input className="btn btn-primary mt-5" type="submit" value="Send" />
-        </form>
+        </motion.form>
       </div>
     </section>
   );
